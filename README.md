@@ -8,11 +8,7 @@
 	Quack is a MacOS-exclusive Swift application that was created to reduce and limit procrastination in users.
 </p>
 
----
-
 ## Features
-
----
 
 - Lightweight and Compact
 - Easy To Use
@@ -22,8 +18,6 @@
 - Can Help With Focusing
 - Can Be Silenced At Any Time
 - It's <em>Free</em>
-
----
 
 ## Attribution
 
