@@ -402,11 +402,21 @@
             <objects>
                 <viewController title="Quack - Preferences" storyboardIdentifier="DuckPreferences" showSeguePresentationStyle="single" id="gvf-hX-28o" customClass="PreferenceViewController" customModule="Quack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="BJv-BE-4Xi">
-                        <rect key="frame" x="0.0" y="0.0" width="350" height="95"/>
+                        <rect key="frame" x="0.0" y="0.0" width="283" height="75"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K9F-39-yzA">
-                                <rect key="frame" x="19" y="58" width="244" height="19"/>
+                            <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gh2-IT-FJz">
+                                <rect key="frame" x="19" y="28" width="246" height="19"/>
+                                <buttonCell key="cell" type="check" title="Silence notification alert sound" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="hGS-Tm-5vV">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system" size="16"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="toggleSilence:" target="gvf-hX-28o" id="3Mq-Ml-LcB"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K9F-39-yzA">
+                                <rect key="frame" x="21" y="49" width="244" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Load Quack on system startup" bezelStyle="regularSquare" imagePosition="left" enabled="NO" inset="2" id="XYe-Mw-eHN">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -416,18 +426,11 @@
                                     <action selector="toggleStartup:" target="gvf-hX-28o" id="LJc-OL-f2T"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gh2-IT-FJz">
-                                <rect key="frame" x="18" y="17" width="246" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Silence notification alert sound" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="hGS-Tm-5vV">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system" size="16"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="toggleSilence:" target="gvf-hX-28o" id="3Mq-Ml-LcB"/>
-                                </connections>
-                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="Gh2-IT-FJz" firstAttribute="centerY" secondItem="BJv-BE-4Xi" secondAttribute="centerY" id="Yu7-wk-Qqv"/>
+                            <constraint firstItem="Gh2-IT-FJz" firstAttribute="centerX" secondItem="BJv-BE-4Xi" secondAttribute="centerX" id="bo9-oV-64U"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="silenceCheckbox" destination="Gh2-IT-FJz" id="sWH-xK-Efy"/>
@@ -436,7 +439,7 @@
                 </viewController>
                 <customObject id="qwp-Ng-uMI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="397" y="199"/>
+            <point key="canvasLocation" x="363.5" y="188.5"/>
         </scene>
     </scenes>
     <resources>

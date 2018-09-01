@@ -184,7 +184,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     //Menu button, visits website
     @objc func visitSite(_ sender: Any?){
-        if let duckURL = URL(string: "https://youtube.com"){
+        if let duckURL = URL(string: "https://gitlab.com/ThomasCameronT/Quack"){
             //Opens URL in default web-browser
             NSWorkspace.shared.open(duckURL)
         }
@@ -197,7 +197,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
         about.alertStyle = .informational
         about.messageText = "Rubber Ducking v\(version)"
-        about.informativeText = "An application created by EFX, 2018. This application is provided free of charge.\nVisit our website at https://www.youtube.com for more information."
+        about.informativeText = "An application created by Cameron Thomas, 2018. This application is provided free of charge.\nVisit: https://gitlab.com/ThomasCameronT/Quack for more information."
         about.runModal()
     }
     
@@ -384,10 +384,10 @@ class duckInfo{
         flavors.append("What kind of project are you making?")
         flavors.append("I enjoy talking to you a lot, we should do this more often!")
         flavors.append("I'd suggest using headphones when talking to me. Y'know, so that people think you're in a call")
-        flavors.append("Shouldn't you be {insert task here} right now...? I won't judge")
+        flavors.append("Shouldn't you be {insert task here} right now...?")
         flavors.append("How's your day going so far?")
+        flavors.append("Did you know you can change my appearance? Just click on the image above")
         flavors.append("Was there something you wanted to talk about?")
-        flavors.append("Please don't leave me alone too long, I could die from loneliness you know...")
     }
     
     //Notification information, and the notification center which handles message delivery
